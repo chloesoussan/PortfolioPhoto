@@ -3,12 +3,40 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Chloé Soussan - Portfolio</title>
+    <title>Chloé Soussan</title>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='currentColor' class='bi bi-camera2' viewBox='0 0 16 16'%3E%3Cpath d='M5 8c0-1.657 2.343-3 4-3V4a4 4 0 0 0-4 4'/%3E%3Cpath d='M12.318 3h2.015C15.253 3 16 3.746 16 4.667v6.666c0 .92-.746 1.667-1.667 1.667h-2.015A5.97 5.97 0 0 1 9 14a5.97 5.97 0 0 1-3.318-1H1.667C.747 13 0 12.254 0 11.333V4.667C0 3.747.746 3 1.667 3H2a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1h.682A5.97 5.97 0 0 1 9 2c1.227 0 2.367.368 3.318 1M2 4.5a.5.5 0 1 0-1 0 .5.5 0 0 0 1 0M14 8A5 5 0 1 0 4 8a5 5 0 0 0 10 0'/%3E%3C/svg%3E" type="image/svg+xml">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <style>
+    body {
+        font-size: 2vw; /* Taille de police adaptative à la largeur de l'écran */
+    }
+    #animated-text {
+        overflow: hidden;
+        text-align: left; /* Défilement de gauche à droite */
+        white-space: nowrap;
+        border-right: #393832; /* Ajoutez un trait vertical à la fin du texte pour simuler le curseur de texte clignotant */
+        animation: typing 3s steps(40, end), blink-caret 0.75s infinite;
+    }
+
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+        to {
+            width: 100%;
+        }
+    }
+
+    @keyframes blink-caret {
+        from, to {
+            border-color: transparent;
+        }
+        50% {
+            border-color: #393832;
+        }
+    }
     #scrollToTopBtn {
         position: fixed;
         bottom: 20px;
@@ -37,7 +65,7 @@
     }
     .fs-2{
         color:#393832;
-        font-size: 2.5rem !important;
+        font-size: 2rem !important;
     }
     .nav-link {
         color:#393832;
@@ -46,7 +74,7 @@
     {
         --bs-nav-pills-link-active-bg: #393832;
         color:#393832;
-        font-size: 2rem !important;
+        font-size: 1.5rem !important;
     }
 
     .container-fluid{
@@ -75,13 +103,16 @@
                 Contact </a></li>
         </ul>
     </header>
-</div>
-<div class="container ">
-        <div class="container-fluid py-5">
+
+    <!--<div class="container" id="animated-text">
+        "Creating an accessible mirror of life through my lens, captured in the space-time continuum."
+    </div>-->
+    <div class="container-fluid py-5">
+        <div style="max-width: 45rem;">
             <p><b>Theme</b><i> Mallorca</i>&nbsp;&nbsp;&nbsp;&nbsp;<b>Cam</b> <i>Minolta 9000</i>
             &nbsp;&nbsp;&nbsp;&nbsp; <b>Film</b> <i>35 mm</i>
             </p>
-            <div class="card border-0" style="width: 40rem;">
+            <div class="card border-0" >
                 <img src="Photos\CNV000023.jpeg" class="card-img-top" alt="Fishing">
                 <div class="card-body">
                     <div class="d-flex justify-content-between">
@@ -90,16 +121,17 @@
                     </div>
                 </div>
             </div>
-
+        </div>
         </div>
     </div>
 </div>
 <div class="container ">
     <div class="container-fluid py-5">
+        <div style="max-width: 45rem;">
         <p><b>Theme</b><i> Mallorca</i>&nbsp;&nbsp;&nbsp;&nbsp;<b>Cam</b> <i>Minolta 9000</i>
             &nbsp;&nbsp;&nbsp;&nbsp; <b>Film</b> <i>35 mm</i>
         </p>
-        <div class="card border-0" style="width: 40rem;">
+        <div class="card border-0" >
             <img src="Photos\CNV000030.jpeg" class="card-img-top" alt="Fishing">
             <div class="card-body">
                 <div class="d-flex justify-content-between">
@@ -108,16 +140,17 @@
                 </div>
             </div>
         </div>
-
+        </div>
     </div>
 </div>
 </div>
 <div class="container ">
     <div class="container-fluid py-5">
+        <div style="max-width: 45rem;">
         <p><b>Theme</b><i> Mallorca</i>&nbsp;&nbsp;&nbsp;&nbsp;<b>Cam</b> <i>Minolta 9000</i>
             &nbsp;&nbsp;&nbsp;&nbsp; <b>Film</b> <i>35 mm</i>
         </p>
-        <div class="card border-0" style="width: 40rem;">
+        <div class="card border-0" >
             <img src="Photos\CNV000031.jpeg" class="card-img-top" alt="Fishing">
             <div class="card-body">
                 <div class="d-flex justify-content-between">
@@ -126,16 +159,17 @@
                 </div>
             </div>
         </div>
-
+        </div>
     </div>
 </div>
 </div>
 <div class="container ">
     <div class="container-fluid py-5">
+        <div style="max-width: 45rem;">
         <p><b>Theme</b><i> Mallorca</i>&nbsp;&nbsp;&nbsp;&nbsp;<b>Cam</b> <i>Minolta 9000</i>
             &nbsp;&nbsp;&nbsp;&nbsp; <b>Film</b> <i>35 mm</i>
         </p>
-        <div class="card border-0" style="width: 40rem;">
+        <div class="card border-0" >
             <img src="Photos\CNV000035.jpeg" class="card-img-top" alt="Fishing">
             <div class="card-body">
                 <div class="d-flex justify-content-between">
@@ -144,34 +178,36 @@
                 </div>
             </div>
         </div>
-
+        </div>
     </div>
 </div>
 </div>
 <div class="container ">
     <div class="container-fluid py-5">
+        <div style="max-width: 45rem;">
         <p><b>Theme</b><i> Mallorca</i>&nbsp;&nbsp;&nbsp;&nbsp;<b>Cam</b> <i>Minolta 9000</i>
             &nbsp;&nbsp;&nbsp;&nbsp; <b>Film</b> <i>35 mm</i>
         </p>
-        <div class="card border-0" style="width: 40rem;">
+        <div class="card border-0" >
             <img src="Photos\CNV000027.jpeg" class="card-img-top" alt="Fishing">
             <div class="card-body">
                 <div class="d-flex justify-content-between">
                     <p class="fs-2 fw-bolder">2023</p>
-                    <p class="fs-2 fw-bolder">Floating pontoon</p>
+                    <p class="fs-2 fw-bolder">Pontoon</p>
                 </div>
             </div>
         </div>
-
+        </div>
     </div>
 </div>
 </div>
 <div class="container ">
     <div class="container-fluid py-5">
+        <div style="max-width: 45rem;">
         <p><b>Theme</b><i> Mallorca</i>&nbsp;&nbsp;&nbsp;&nbsp;<b>Cam</b> <i>Minolta 9000</i>
             &nbsp;&nbsp;&nbsp;&nbsp; <b>Film</b> <i>35 mm</i>
         </p>
-        <div class="card border-0" style="width: 40rem;">
+        <div class="card border-0" >
             <img src="Photos\CNV000037.jpeg" class="card-img-top" alt="Fishing">
             <div class="card-body">
                 <div class="d-flex justify-content-between">
@@ -180,16 +216,17 @@
                 </div>
             </div>
         </div>
-
+        </div>
     </div>
 </div>
 </div>
 <div class="container ">
     <div class="container-fluid py-5">
+        <div style="max-width: 45rem;">
         <p><b>Theme</b><i> Mallorca</i>&nbsp;&nbsp;&nbsp;&nbsp;<b>Cam</b> <i>Minolta 9000</i>
             &nbsp;&nbsp;&nbsp;&nbsp; <b>Film</b> <i>35 mm</i>
         </p>
-        <div class="card border-0" style="width: 40rem;">
+        <div class="card border-0" >
             <img src="Photos\CNV000036.jpeg" class="card-img-top" alt="Fishing">
             <div class="card-body">
                 <div class="d-flex justify-content-between">
@@ -198,16 +235,17 @@
                 </div>
             </div>
         </div>
-
+        </div>
     </div>
 </div>
 </div>
 <div class="container ">
     <div class="container-fluid py-5">
+        <div style="max-width: 45rem;">
         <p><b>Theme</b><i> Mallorca</i>&nbsp;&nbsp;&nbsp;&nbsp;<b>Cam</b> <i>Minolta 9000</i>
             &nbsp;&nbsp;&nbsp;&nbsp; <b>Film</b> <i>35 mm</i>
         </p>
-        <div class="card border-0" style="width: 40rem;">
+        <div class="card border-0">
             <img src="Photos\CNV000024.jpeg" class="card-img-top" alt="Fishing">
             <div class="card-body">
                 <div class="d-flex justify-content-between">
@@ -216,16 +254,17 @@
                 </div>
             </div>
         </div>
-
+        </div>
     </div>
 </div>
 </div>
 <div class="container ">
     <div class="container-fluid py-5">
+        <div style="max-width: 45rem;">
         <p><b>Theme</b><i> Mallorca</i>&nbsp;&nbsp;&nbsp;&nbsp;<b>Cam</b> <i>Minolta 9000</i>
             &nbsp;&nbsp;&nbsp;&nbsp; <b>Film</b> <i>35 mm</i>
         </p>
-        <div class="card border-0" style="width: 40rem;">
+        <div class="card border-0" >
             <img src="Photos\CNV000040.jpeg" class="card-img-top" alt="Fishing">
             <div class="card-body">
                 <div class="d-flex justify-content-between">
@@ -234,16 +273,17 @@
                 </div>
             </div>
         </div>
-
+        </div>
     </div>
 </div>
 </div>
 <div class="container ">
     <div class="container-fluid py-5">
+        <div style="max-width: 45rem;">
         <p><b>Theme</b><i> Mallorca</i>&nbsp;&nbsp;&nbsp;&nbsp;<b>Cam</b> <i>Minolta 9000</i>
             &nbsp;&nbsp;&nbsp;&nbsp; <b>Film</b> <i>35 mm</i>
         </p>
-        <div class="card border-0" style="width: 40rem;">
+        <div class="card border-0" >
             <img src="Photos\CNV000034.jpeg" class="card-img-top" alt="Fishing">
             <div class="card-body">
                 <div class="d-flex justify-content-between">
@@ -252,16 +292,17 @@
                 </div>
             </div>
         </div>
-
+        </div>
     </div>
 </div>
 </div>
 <div class="container ">
     <div class="container-fluid py-5">
+        <div style="max-width: 45rem;">
         <p><b>Theme</b><i> Mallorca</i>&nbsp;&nbsp;&nbsp;&nbsp;<b>Cam</b> <i>Minolta 9000</i>
             &nbsp;&nbsp;&nbsp;&nbsp; <b>Film</b> <i>35 mm</i>
         </p>
-        <div class="card border-0" style="width: 40rem;">
+        <div class="card border-0" >
             <img src="Photos\CNV000039.jpeg" class="card-img-top" alt="Fishing">
             <div class="card-body">
                 <div class="d-flex justify-content-between">
@@ -270,25 +311,26 @@
                 </div>
             </div>
         </div>
-
+        </div>
     </div>
 </div>
 </div>
 <div class="container ">
     <div class="container-fluid py-5">
+        <div style="max-width: 45rem;">
         <p><b>Theme</b><i> Paris</i>&nbsp;&nbsp;&nbsp;&nbsp;<b>Cam</b> <i>Minolta 9000</i>
             &nbsp;&nbsp;&nbsp;&nbsp; <b>Film</b> <i>35 mm</i>
         </p>
-        <div class="card border-0" style="width: 40rem;">
+        <div class="card border-0" >
             <img src="Photos\CNV000015.jpeg" class="card-img-top" alt="Fishing">
             <div class="card-body">
                 <div class="d-flex justify-content-between">
                     <p class="fs-2 fw-bolder">2023</p>
-                    <p class="fs-2 fw-bolder">Les philosophes</p>
+                    <p class="fs-2 fw-bolder">Philosophes</p>
                 </div>
             </div>
         </div>
-
+        </div>
     </div>
 </div>
 </div>
@@ -323,5 +365,16 @@
             scrollToTopBtn.style.display = "none";
         }
     }
+</script>
+<script>
+    // Si vous voulez que l'animation démarre automatiquement
+    document.addEventListener('DOMContentLoaded', function () {
+        var textElement = document.getElementById('animated-text');
+        textElement.innerHTML = textElement.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+        setTimeout(function () {
+            textElement.classList.add('show');
+        }, 500); // Attendez 500 ms avant de montrer la première lettre
+    });
 </script>
 </html>
