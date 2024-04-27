@@ -7,16 +7,17 @@
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='currentColor' class='bi bi-camera2' viewBox='0 0 16 16'%3E%3Cpath d='M5 8c0-1.657 2.343-3 4-3V4a4 4 0 0 0-4 4'/%3E%3Cpath d='M12.318 3h2.015C15.253 3 16 3.746 16 4.667v6.666c0 .92-.746 1.667-1.667 1.667h-2.015A5.97 5.97 0 0 1 9 14a5.97 5.97 0 0 1-3.318-1H1.667C.747 13 0 12.254 0 11.333V4.667C0 3.747.746 3 1.667 3H2a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1h.682A5.97 5.97 0 0 1 9 2c1.227 0 2.367.368 3.318 1M2 4.5a.5.5 0 1 0-1 0 .5.5 0 0 0 1 0M14 8A5 5 0 1 0 4 8a5 5 0 0 0 10 0'/%3E%3C/svg%3E" type="image/svg+xml">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
 </head>
 <style>
     body {
-        font-size: 2vw; /* Taille de police adaptative à la largeur de l'écran */
+        font-size: 2vw;
     }
     #animated-text {
         overflow: hidden;
-        text-align: left; /* Défilement de gauche à droite */
+        text-align: left;
         white-space: nowrap;
-        border-right: #393832; /* Ajoutez un trait vertical à la fin du texte pour simuler le curseur de texte clignotant */
+        border-right: #393832;
         animation: typing 3s steps(40, end), blink-caret 0.75s infinite;
     }
 
@@ -42,47 +43,74 @@
         bottom: 20px;
         right: 20px;
         display: none;
-        background-color: #ebeadf;
-        color: #393832;
+        background-color: white;
+        color: white;
         border: none;
         border-radius: 5px;
         padding: 10px 15px;
         cursor: pointer;
     }
     body {
-        background-color: #ebeadf;
+        background-image: url("Photos/CNV000023.jpeg");
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        animation: fadeIn 3s ease-in-out;
+    }
+    @keyframes fadeIn {
+        0% {
+            opacity: 0; /* Commence avec une opacité de 0 */
+        }
+        100% {
+            opacity: 1; /* Termine avec une opacité de 1 */
+        }
     }
     footer {
-        /*position: fixed;*/
         bottom: 0;
         width: 100%;
-        color:#393832;
+        color:white;
         padding: 20px;
     }
     .fs-1{
-        color:#393832;
+        color:white;
         font-size: 4rem !important;
     }
     .fs-2{
-        color:#393832;
+        color:white;
+        font-size: 1.5rem !important;
+    }
+    .fs-3{
+        color:white;
         font-size: 2rem !important;
     }
     .nav-link {
-        color:#393832;
+        color:white;
     }
     .nav-pills  .nav-link
     {
-        --bs-nav-pills-link-active-bg: #393832;
-        color:#393832;
+        --bs-nav-pills-link-active-bg: white;
+        color:white;
         font-size: 1.5rem !important;
     }
+    .lead:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s ease;
+        cursor: pointer;
+    }
+
+    .nav-link:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s ease;
+        cursor: pointer;
+    }
+
 
     .container-fluid{
-        background-color: #ebeadf;
+        background-color: white;
     }
    .card-body{
-       background-color: #ebeadf;
-       border-color: #ebeadf;;
+       background-color:white;
+       border-color:white;
    }
 </style>
 <body>
@@ -93,7 +121,7 @@
 
         <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
 
-            <b ><span class="fs-1 ">Chloé Soussan</span></b>
+            <b ><span class="fs-1">Chloé Soussan</span></b>
         </a>
 
         <ul class="nav nav-pills">
@@ -103,342 +131,23 @@
                 Contact </a></li>
         </ul>
     </header>
-
-    <!--<div class="container" id="animated-text">
-        "Creating an accessible mirror of life through my lens, captured in the space-time continuum."
-    </div>-->
-    <div class="container-fluid py-5">
-        <div style="max-width: 45rem;">
-            <p><b>Theme</b><i> Brocante</i>&nbsp;&nbsp;&nbsp;&nbsp;<b>Cam</b> <i>Espio 928</i>
-                &nbsp;&nbsp;&nbsp;&nbsp; <b>Film</b> <i>35 mm</i>
+    <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <h1 class="fs-3">Film photography</h1>
+                <p class="fs-2">Shooting life with Espio pentax 928 & Minolta only in black and white 35 mm films</p>
+            </div>
+            <p class="lead">
+                <a href="ContactPage.html" class="btn btn-lg btn-light fw-bold border-white bg-white">See gallery</a>
             </p>
-            <div class="card border-0" >
-                <img src="Photos\CNV000044.jpeg" class="card-img-top" alt="Jukebox">
-                <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                        <p class="fs-2 fw-bolder">2024</p>
-                        <p class="fs-2 fw-bolder">Jukebox</p>
-                    </div>
-                </div>
-            </div>
         </div>
-    </div>
-    <div class="container-fluid py-5">
-        <div style="max-width: 45rem;">
-            <p><b>Theme</b><i> Brocante</i>&nbsp;&nbsp;&nbsp;&nbsp;<b>Cam</b> <i>Espio 928</i>
-                &nbsp;&nbsp;&nbsp;&nbsp; <b>Film</b> <i>35 mm</i>
-            </p>
-            <div class="card border-0" >
-                <img src="Photos\CNV000041.jpeg" class="card-img-top" alt="Buttons">
-                <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                        <p class="fs-2 fw-bolder">2024</p>
-                        <p class="fs-2 fw-bolder">Buttons</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid py-5">
-        <div style="max-width: 45rem;">
-            <p><b>Theme</b><i> Brocante</i>&nbsp;&nbsp;&nbsp;&nbsp;<b>Cam</b> <i>Espio 928</i>
-                &nbsp;&nbsp;&nbsp;&nbsp; <b>Film</b> <i>35 mm</i>
-            </p>
-            <div class="card border-0" >
-                <img src="Photos\CNV000042.jpeg" class="card-img-top" alt="Give me the night">
-                <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                        <p class="fs-2 fw-bolder">2024</p>
-                        <p class="fs-2 fw-bolder">George</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid py-5">
-        <div style="max-width: 45rem;">
-            <p><b>Theme</b><i> Brocante</i>&nbsp;&nbsp;&nbsp;&nbsp;<b>Cam</b> <i>Espio 928</i>
-                &nbsp;&nbsp;&nbsp;&nbsp; <b>Film</b> <i>35 mm</i>
-            </p>
-            <div class="card border-0" >
-                <img src="Photos\CNV000046.jpeg" class="card-img-top" alt="Bikes">
-                <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                        <p class="fs-2 fw-bolder">2024</p>
-                        <p class="fs-2 fw-bolder">Bikes</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--<div class="container-fluid py-5">
-        <div style="max-width: 45rem;">
-            <p><b>Theme</b><i> Au Carreau</i>&nbsp;&nbsp;&nbsp;&nbsp;<b>Cam</b> <i>Espio 928</i>
-                &nbsp;&nbsp;&nbsp;&nbsp; <b>Film</b> <i>35 mm</i>
-            </p>
-            <div class="card border-0" >
-                <img src="Photos\CNV000048.jpeg" class="card-img-top" alt="">
-                <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                        <p class="fs-2 fw-bolder">2024</p>
-                        <p class="fs-2 fw-bolder">33 tours</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>-->
-<!--    <div class="container-fluid py-5">
-        <div style="max-width: 45rem;">
-            <p><b>Theme</b><i> Brocante</i>&nbsp;&nbsp;&nbsp;&nbsp;<b>Cam</b> <i>Espio 928</i>
-                &nbsp;&nbsp;&nbsp;&nbsp; <b>Film</b> <i>35 mm</i>
-            </p>
-            <div class="card border-0" >
-                <img src="Photos\CNV000045.jpeg" class="card-img-top" alt="">
-                <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                        <p class="fs-2 fw-bolder">2024</p>
-                        <p class="fs-2 fw-bolder">Bretagne</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>-->
-   <!-- <div class="container-fluid py-5">
-        <div style="max-width: 45rem;">
-            <p><b>Theme</b><i> Belleville</i>&nbsp;&nbsp;&nbsp;&nbsp;<b>Cam</b> <i>Espio 928</i>
-                &nbsp;&nbsp;&nbsp;&nbsp; <b>Film</b> <i>35 mm</i>
-            </p>
-            <div class="card border-0" >
-                <img src="Photos\CNV000050.jpeg" class="card-img-top" alt="Street">
-                <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                        <p class="fs-2 fw-bolder">2024</p>
-                        <p class="fs-2 fw-bolder">Street</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>-->
-    <div class="container-fluid py-5">
-        <div style="max-width: 45rem;">
-            <p><b>Theme</b><i> Mallorca</i>&nbsp;&nbsp;&nbsp;&nbsp;<b>Cam</b> <i>Minolta 9000</i>
-            &nbsp;&nbsp;&nbsp;&nbsp; <b>Film</b> <i>35 mm</i>
-            </p>
-            <div class="card border-0" >
-                <img src="Photos\CNV000023.jpeg" class="card-img-top" alt="Fishing">
-                <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                        <p class="fs-2 fw-bolder">2023</p>
-                        <p class="fs-2 fw-bolder">Fishing</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-    </div>
-<div class="container ">
-    <div class="container-fluid py-5">
-        <div style="max-width: 45rem;">
-        <p><b>Theme</b><i> Mallorca</i>&nbsp;&nbsp;&nbsp;&nbsp;<b>Cam</b> <i>Minolta 9000</i>
-            &nbsp;&nbsp;&nbsp;&nbsp; <b>Film</b> <i>35 mm</i>
-        </p>
-        <div class="card border-0" >
-            <img src="Photos\CNV000030.jpeg" class="card-img-top" alt="Fishing">
-            <div class="card-body">
-                <div class="d-flex justify-content-between">
-                    <p class="fs-2 fw-bolder">2023</p>
-                    <p class="fs-2 fw-bolder">Grandpa</p>
-                </div>
-            </div>
-        </div>
-        </div>
-    </div>
-</div>
-<div class="container ">
-    <div class="container-fluid py-5">
-        <div style="max-width: 45rem;">
-        <p><b>Theme</b><i> Mallorca</i>&nbsp;&nbsp;&nbsp;&nbsp;<b>Cam</b> <i>Minolta 9000</i>
-            &nbsp;&nbsp;&nbsp;&nbsp; <b>Film</b> <i>35 mm</i>
-        </p>
-        <div class="card border-0" >
-            <img src="Photos\CNV000031.jpeg" class="card-img-top" alt="Fishing">
-            <div class="card-body">
-                <div class="d-flex justify-content-between">
-                    <p class="fs-2 fw-bolder">2023</p>
-                    <p class="fs-2 fw-bolder">The little train</p>
-                </div>
-            </div>
-        </div>
-        </div>
-    </div>
-</div>
-<div class="container ">
-    <div class="container-fluid py-5">
-        <div style="max-width: 45rem;">
-        <p><b>Theme</b><i> Mallorca</i>&nbsp;&nbsp;&nbsp;&nbsp;<b>Cam</b> <i>Minolta 9000</i>
-            &nbsp;&nbsp;&nbsp;&nbsp; <b>Film</b> <i>35 mm</i>
-        </p>
-        <div class="card border-0" >
-            <img src="Photos\CNV000035.jpeg" class="card-img-top" alt="Fishing">
-            <div class="card-body">
-                <div class="d-flex justify-content-between">
-                    <p class="fs-2 fw-bolder">2023</p>
-                    <p class="fs-2 fw-bolder">Supermarket</p>
-                </div>
-            </div>
-        </div>
-        </div>
-    </div>
-</div>
-<div class="container ">
-    <div class="container-fluid py-5">
-        <div style="max-width: 45rem;">
-        <p><b>Theme</b><i> Mallorca</i>&nbsp;&nbsp;&nbsp;&nbsp;<b>Cam</b> <i>Minolta 9000</i>
-            &nbsp;&nbsp;&nbsp;&nbsp; <b>Film</b> <i>35 mm</i>
-        </p>
-        <div class="card border-0" >
-            <img src="Photos\CNV000027.jpeg" class="card-img-top" alt="Fishing">
-            <div class="card-body">
-                <div class="d-flex justify-content-between">
-                    <p class="fs-2 fw-bolder">2023</p>
-                    <p class="fs-2 fw-bolder">Pontoon</p>
-                </div>
-            </div>
-        </div>
-        </div>
-    </div>
-</div>
-<div class="container ">
-    <div class="container-fluid py-5">
-        <div style="max-width: 45rem;">
-        <p><b>Theme</b><i> Mallorca</i>&nbsp;&nbsp;&nbsp;&nbsp;<b>Cam</b> <i>Minolta 9000</i>
-            &nbsp;&nbsp;&nbsp;&nbsp; <b>Film</b> <i>35 mm</i>
-        </p>
-        <div class="card border-0" >
-            <img src="Photos\CNV000037.jpeg" class="card-img-top" alt="Fishing">
-            <div class="card-body">
-                <div class="d-flex justify-content-between">
-                    <p class="fs-2 fw-bolder">2023</p>
-                    <p class="fs-2 fw-bolder">Basket</p>
-                </div>
-            </div>
-        </div>
-        </div>
-    </div>
-</div>
-<div class="container ">
-    <div class="container-fluid py-5">
-        <div style="max-width: 45rem;">
-        <p><b>Theme</b><i> Mallorca</i>&nbsp;&nbsp;&nbsp;&nbsp;<b>Cam</b> <i>Minolta 9000</i>
-            &nbsp;&nbsp;&nbsp;&nbsp; <b>Film</b> <i>35 mm</i>
-        </p>
-        <div class="card border-0" >
-            <img src="Photos\CNV000036.jpeg" class="card-img-top" alt="Fishing">
-            <div class="card-body">
-                <div class="d-flex justify-content-between">
-                    <p class="fs-2 fw-bolder">2023</p>
-                    <p class="fs-2 fw-bolder">Watermelon</p>
-                </div>
-            </div>
-        </div>
-        </div>
-    </div>
-</div>
-<div class="container ">
-    <div class="container-fluid py-5">
-        <div style="max-width: 45rem;">
-        <p><b>Theme</b><i> Mallorca</i>&nbsp;&nbsp;&nbsp;&nbsp;<b>Cam</b> <i>Minolta 9000</i>
-            &nbsp;&nbsp;&nbsp;&nbsp; <b>Film</b> <i>35 mm</i>
-        </p>
-        <div class="card border-0">
-            <img src="Photos\CNV000024.jpeg" class="card-img-top" alt="Fishing">
-            <div class="card-body">
-                <div class="d-flex justify-content-between">
-                    <p class="fs-2 fw-bolder">2023</p>
-                    <p class="fs-2 fw-bolder">The sea</p>
-                </div>
-            </div>
-        </div>
-        </div>
-    </div>
-</div>
-<div class="container ">
-    <div class="container-fluid py-5">
-        <div style="max-width: 45rem;">
-        <p><b>Theme</b><i> Mallorca</i>&nbsp;&nbsp;&nbsp;&nbsp;<b>Cam</b> <i>Minolta 9000</i>
-            &nbsp;&nbsp;&nbsp;&nbsp; <b>Film</b> <i>35 mm</i>
-        </p>
-        <div class="card border-0" >
-            <img src="Photos\CNV000040.jpeg" class="card-img-top" alt="Fishing">
-            <div class="card-body">
-                <div class="d-flex justify-content-between">
-                    <p class="fs-2 fw-bolder">2023</p>
-                    <p class="fs-2 fw-bolder">Deià</p>
-                </div>
-            </div>
-        </div>
-        </div>
-    </div>
-</div>
-<div class="container ">
-    <div class="container-fluid py-5">
-        <div style="max-width: 45rem;">
-        <p><b>Theme</b><i> Mallorca</i>&nbsp;&nbsp;&nbsp;&nbsp;<b>Cam</b> <i>Minolta 9000</i>
-            &nbsp;&nbsp;&nbsp;&nbsp; <b>Film</b> <i>35 mm</i>
-        </p>
-        <div class="card border-0" >
-            <img src="Photos\CNV000034.jpeg" class="card-img-top" alt="Fishing">
-            <div class="card-body">
-                <div class="d-flex justify-content-between">
-                    <p class="fs-2 fw-bolder">2023</p>
-                    <p class="fs-2 fw-bolder">Souvenirs</p>
-                </div>
-            </div>
-        </div>
-        </div>
-    </div>
-</div>
-<div class="container ">
-    <div class="container-fluid py-5">
-        <div style="max-width: 45rem;">
-        <p><b>Theme</b><i> Mallorca</i>&nbsp;&nbsp;&nbsp;&nbsp;<b>Cam</b> <i>Minolta 9000</i>
-            &nbsp;&nbsp;&nbsp;&nbsp; <b>Film</b> <i>35 mm</i>
-        </p>
-        <div class="card border-0" >
-            <img src="Photos\CNV000039.jpeg" class="card-img-top" alt="Fishing">
-            <div class="card-body">
-                <div class="d-flex justify-content-between">
-                    <p class="fs-2 fw-bolder">2023</p>
-                    <p class="fs-2 fw-bolder">Waiting</p>
-                </div>
-            </div>
-        </div>
-        </div>
-    </div>
-</div>
-<div class="container ">
-    <div class="container-fluid py-5">
-        <div style="max-width: 45rem;">
-        <p><b>Theme</b><i> Paris</i>&nbsp;&nbsp;&nbsp;&nbsp;<b>Cam</b> <i>Minolta 9000</i>
-            &nbsp;&nbsp;&nbsp;&nbsp; <b>Film</b> <i>35 mm</i>
-        </p>
-        <div class="card border-0" >
-            <img src="Photos\CNV000015.jpeg" class="card-img-top" alt="Fishing">
-            <div class="card-body">
-                <div class="d-flex justify-content-between">
-                    <p class="fs-2 fw-bolder">2023</p>
-                    <p class="fs-2 fw-bolder">Philosophes</p>
-                </div>
-            </div>
-        </div>
-        </div>
-    </div>
+    </section>
+<br>
+    <br>
 
 </div>
-<div class="container text-center">
-    <footer class="py-5">
-        <p>&copy; 2024 Chloé Soussan, Inc. All rights reserved.</p>
-    </footer>
+
+        </div>
 </div>
 </body>
 <button id="scrollToTopBtn" onclick="scrollToTop()"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
