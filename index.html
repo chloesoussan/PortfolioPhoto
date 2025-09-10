@@ -51,7 +51,7 @@
         cursor: pointer;
     }
     body {
-        /*background-image: url("Photos/CNV000023.jpeg");*/
+
         background-position: center;
         background-size: cover;
         background-attachment: fixed;
@@ -59,10 +59,10 @@
     }
     @keyframes fadeIn {
         0% {
-            opacity: 0; /* Commence avec une opacité de 0 */
+            opacity: 0;
         }
         100% {
-            opacity: 1; /* Termine avec une opacité de 1 */
+            opacity: 1;
         }
     }
     footer {
@@ -130,7 +130,7 @@
         <div class="row py-lg-5">
             <div class="col-lg-6 col-md-8 mx-auto">
                 <h1 class="fs-3">Film photography</h1>
-                <p class="fs-2">Shooting life with Konica & Contax </p>
+                <p class="fs-2">Shooting life with Konica </p>
             </div>
             <p class="lead">
                 <a href="SUMIMASEN.html" class="btn btn-lg btn-light fw-bold border-white bg-white">See gallery</a>
@@ -179,7 +179,6 @@
     }
 </script>
 <script>
-    // Si vous voulez que l'animation démarre automatiquement
     document.addEventListener('DOMContentLoaded', function () {
         var textElement = document.getElementById('animated-text');
         textElement.innerHTML = textElement.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
