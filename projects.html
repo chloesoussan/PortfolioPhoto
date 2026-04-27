@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Projects - Chloé Soussan</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="protect-images.css">
   <style>
+    html, body { height: 100%; }
     body { background: white; color: #393832; }
     .site-navbar { border-bottom: 1px solid rgba(57, 56, 50, 0.12); }
     .site-navbar .navbar-brand { color: #393832; font-size: 2.2rem; font-weight: 700; }
@@ -16,10 +18,46 @@
     .site-navbar .navbar-toggler:focus { box-shadow: none; }
     .project-wrap { max-width: 900px; margin: 2rem auto; }
     .project-card { border: 1px solid rgba(57,56,50,0.18); border-radius: 14px; padding: 1.1rem; margin-bottom: 1rem; }
+    body { min-height: 100vh; display: flex; flex-direction: column; }
+    main { flex: 1 0 auto; }
+    footer { flex-shrink: 0; }
+    .gallery-img {
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.gallery-img:hover {
+  transform: scale(1.05);
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+.lightbox.active {
+  display: flex;
+}
   </style>
 </head>
 <body>
-<div class="container">
+<main class="container">
   <header class="site-navbar mb-4">
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid px-0">
@@ -29,7 +67,7 @@
         </button>
         <div class="collapse navbar-collapse" id="mainNavbar">
           <ul class="navbar-nav ms-lg-auto mb-2 mb-lg-0 gap-lg-1">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li><li class="nav-item"><a class="nav-link" href="SUMIMASEN.html">SUMIMASEN</a></li><li class="nav-item"><a class="nav-link" href="SEOUL.html">SEOUL</a></li><li class="nav-item"><a class="nav-link active" aria-current="page" href="projects.html">Projects</a></li><li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li><li class="nav-item"><a class="nav-link" href="SUMIMASEN.html">SUMIMASEN</a></li><li class="nav-item"><a class="nav-link" href="SEOUL.html">안녕하세요</a></li><li class="nav-item"><a class="nav-link active" aria-current="page" href="projects.html">Projects</a></li><li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           </ul>
         </div>
       </div>
@@ -38,10 +76,58 @@
   <section class="project-wrap">
     <h1 class="mb-3">Projects</h1>
     <div class="project-card"><h5>SUMIMASEN</h5><p class="mb-0">An everyday visual diary from Japan with warm cinematic tones.</p></div>
-    <div class="project-card"><h5>SEOUL</h5><p class="mb-0">Street fragments, movement, and color from Seoul.</p></div>
-    <div class="project-card"><h5>Katia Soussan Ceramics</h5><p class="mb-0">A black-and-white curation focused on contrast and mood.</p></div>
+    <div class="project-card"><h5>안녕하세요</h5><p class="mb-0">Street fragments, movement, and color from Seoul.</p></div>
+    <div class="project-card">
+      <h5>Katia Soussan Ceramics</h5>
+      <p class="mb-3">
+        This triptych was created to showcase the artist’s pieces for their exhibition in Febrero Studio gallery in Spain, capturing movement and presence through a photographic narrative.
+      </p>
+    
+      <div class="row g-3 gallery">
+        <div class="col-12 col-md-4">
+          <img src="Photos\K3.jpeg" class="img-fluid gallery-img" alt="K1">
+        </div>
+        <div class="col-12 col-md-4">
+          <img src="Photos\K2.jpeg" class="img-fluid gallery-img" alt="K2">
+        </div>
+        <div class="col-12 col-md-4">
+          <img src="Photos\K1.jpeg" class="img-fluid gallery-img" alt="K3">
+        </div>
+      </div>
+    </div>
   </section>
-</div>
+</main>
+
+<footer class="py-3 text-center" style="font-size: 0.9rem;">
+  <div class="container">
+    <p class="mb-2">&copy; 2024 Chloé Soussan, Inc. All rights reserved.</p>
+    <div class="d-flex justify-content-center">
+      <ul class="nav nav-pills">
+       
+      </ul>
+    </div>
+  </div>
+</footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="protect-images.js"></script>
+<div class="lightbox" id="lightbox">
+  <img src="" alt="preview">
+</div>
+<script>
+  const images = document.querySelectorAll(".gallery-img");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = lightbox.querySelector("img");
+
+  images.forEach(img => {
+    img.addEventListener("click", () => {
+      lightbox.classList.add("active");
+      lightboxImg.src = img.src;
+    });
+  });
+
+  lightbox.addEventListener("click", () => {
+    lightbox.classList.remove("active");
+  });
+</script>
 </body>
 </html>
